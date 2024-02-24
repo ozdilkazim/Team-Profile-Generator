@@ -9,7 +9,7 @@ const questions = {
             if (name) {
                 return true;
             } else {
-                return 'Please enter a valid name';
+                return '.      Please enter a valid name';
             }
         },
         },
@@ -22,7 +22,7 @@ const questions = {
                 if (id) {
                     return true;
                 } else {
-                    return 'Please enter a valid name';
+                    return '.      Please enter a valid name';
                 }
             },
         },
@@ -36,7 +36,7 @@ const questions = {
                 if (valid) {
                     return true;
                 } else {
-                    console.log("Please enter a valid email")
+                    console.log(".      Please enter a valid email")
                     return false;
                 }
             },
@@ -50,7 +50,7 @@ const questions = {
                 if (officeNumber) {
                     return true;
                 } else {
-                    return 'Please enter a valid office number';
+                    return '.      Please enter a valid office number';
                 }
             },
         },
@@ -66,7 +66,7 @@ const questions = {
                 if (name) {
                     return true;
                 } else {
-                    return 'Please enter a valid name';
+                    return '.     Please enter a valid name';
                 }
             },
         },
@@ -79,7 +79,7 @@ const questions = {
                 if (id) {
                     return true;
                 } else {
-                    return 'Please enter a valid name';
+                    return '.     Please enter a valid name';
                 }
             },
         },
@@ -93,7 +93,7 @@ const questions = {
                 if (valid) {
                     return true;
                 } else {
-                    console.log("Please enter a valid email")
+                    console.log(".      Please enter a valid email")
                     return false;
                 }
             },
@@ -107,7 +107,7 @@ const questions = {
                 if (github) {
                     return true;
                 } else {
-                    return 'Please enter a valid github username';
+                    return '.      Please enter a valid github username';
                 }
             },
         },
@@ -123,7 +123,7 @@ const questions = {
                 if (name) {
                     return true;
                 } else {
-                    return 'Please enter a valid name';
+                    return '.      Please enter a valid name';
                 }
             },
         },
@@ -136,7 +136,7 @@ const questions = {
                 if (id) {
                     return true;
                 } else {
-                    return 'Please enter a valid name';
+                    return '.      Please enter a valid name';
                 }
             },
         },
@@ -150,7 +150,7 @@ const questions = {
                 if (valid) {
                     return true;
                 } else {
-                    console.log("Please enter a valid email")
+                    console.log(".      Please enter a valid email")
                     return false;
                 }
             },
@@ -164,7 +164,7 @@ const questions = {
                 if (school) {
                     return true;
                 } else {
-                    return 'Please enter a school name';
+                    return '.      Please enter a school name';
                 }
             },
         },
