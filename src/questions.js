@@ -30,11 +30,29 @@ const questions = {
             type : 'input',
             name : 'email',
             message : 'What is the email of the manager?',
+            // Email validation with RegEx
+            validate: async (email) => {
+                valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
+                if (valid) {
+                    return true;
+                } else {
+                    console.log("Please enter a valid email")
+                    return false;
+                }
+            },
         },
         {
             type : 'input',
             name : 'officeNumber',
-            message : 'What is the office number of the manager?',
+            message : 'What is the office number of the manager?',                 
+            // Id Validation
+            validate: async (officeNumber) => {
+                if (officeNumber) {
+                    return true;
+                } else {
+                    return 'Please enter a valid office number';
+                }
+            },
         },
     ],
 
