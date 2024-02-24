@@ -4,6 +4,12 @@ const Intern = require("./lib/Intern");
 const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
+// External questions file
+const questions = require("./src/questions");
+const questionsManager = questions.questionsManager;
+const questionsEngineer = questions.questionsEngineer;
+const questionsIntern = questions.questionsIntern;
+const questionsTeammember = questions.questionsTeammember;
 
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
@@ -19,28 +25,7 @@ let team = [];
 // Create inquiry for manager
 const managerInquiry = () => {
     inquirer
-        .prompt([
-            {
-                type : 'input',
-                name : 'name',
-                message : 'What is the name of the manager?'
-            },
-            {
-                type : 'input',
-                name : 'id',
-                message : 'What is the ID of the manager?'
-            },
-            {
-                type : 'input',
-                name : 'email',
-                message : 'What is the email of the manager?'
-            },
-            {
-                type : 'input',
-                name : 'officeNumber',
-                message : 'What is the office number of the manager?'
-            },
-        ])
+        .prompt(questionsManager)
         .then((answers) => {
             const manager = new Manager(answers.name, answers.id, answers.email, answers.officeNumber);
             team.push(manager);
@@ -51,28 +36,7 @@ const managerInquiry = () => {
 // Create inquiry for engineer
 const engineerInquiry = () => {
     inquirer
-        .prompt([
-            {
-                type : 'input',
-                name : 'name',
-                message : 'What is the name of the engineer?'
-            },
-            {
-                type : 'input',
-                name : 'id',
-                message : 'What is the ID of the engineer?'
-            },
-            {
-                type : 'input',
-                name : 'email',
-                message : 'What is the email of the engineer?'
-            },
-            {
-                type : 'input',
-                name : 'github',
-                message : 'What is the Github username of the engineer?'
-            },
-        ])
+        .prompt(questionsEngineer)
         .then((answers) => {
             const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github);
             team.push(engineer);
@@ -83,28 +47,7 @@ const engineerInquiry = () => {
 // Create inquiry for intern
 const internInquiry = () => {
     inquirer
-        .prompt([
-            {
-                type : 'input',
-                name : 'name',
-                message : 'What is the name of the intern?',
-            },
-            {
-                type : 'input',
-                name : 'id',
-                message : 'What is the ID of the intern?',
-            },
-            {
-                type : 'input',
-                name : 'email',
-                message : 'What is the email of the intern?',
-            },
-            {
-                type : 'input',
-                name : 'school',
-                message : 'What is the school of the intern?',
-            },
-        ])
+        .prompt(questionsIntern)
         .then((answers) => {
             const intern = new Intern(answers.name, answers.id, answers.email, answers.school);
             team.push(intern);
@@ -116,21 +59,13 @@ const internInquiry = () => {
 // the function for adding team member
 const addTeamMember = ()=> {
     inquirer
-        .prompt([
-            {
-                type : 'list',
-                name : 'type',
-                message : 'Would you like to add an Enginner or Intern?',
-                choices : ['Engineer','Intern','None' ]
-            },
-        ])
+        .prompt(questionsTeammember)
         .then((answers) => {
             if(answers.type === 'Engineer') {
                 engineerInquiry();
             } else if (answers.type === 'Intern') {
                internInquiry();
             } else {
-                console.log(team);
                 writeFile()
             }
         })
