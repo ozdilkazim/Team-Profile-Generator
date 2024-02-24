@@ -21,4 +21,4 @@ Thanks to Jung for incredible teaching.
 ## Tests
 Use `npm run test` if you desire to make a test.
 ## Questions
-If you have further questions, please click on my [Github Profile](https://www.github.com/ozdilkazim) or contact me at [skozdil@gmail.com](skozdil@gmail.com)
+If you have further questions, please click on my [Github Profile](https://www.github.com/ozdilkazim) or contact me at [skozdil@gmail.com](mailto:skozdil@gmail.com)
