@@ -11,7 +11,7 @@ Team Profile Generator by using Inquirer and Node : This is a team profile gener
 * [Questions](#questions)
 
 ## Installation
-You should run `node -install` before running the code. If you make the test the if the code works properly please use `node -d -install` to use `jest` to make a test.
+You should run `node -install` before running the code. 
 ## Usage
 Follow installation guide while using `node index.js` for generate a team profile HTML page. 
 ## License
