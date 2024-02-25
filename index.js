@@ -34,7 +34,7 @@ const managerInquiry = () => {
         });
 }
 // Create init function to run the code
-init () => { 
+const init = () => { 
     managerInquiry();
 }
 // Create inquiry for engineer
