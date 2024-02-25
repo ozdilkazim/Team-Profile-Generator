@@ -33,6 +33,10 @@ const managerInquiry = () => {
 
         });
 }
+// Create init function to run the code
+init () => { 
+    managerInquiry();
+}
 // Create inquiry for engineer
 const engineerInquiry = () => {
     inquirer
@@ -83,4 +87,4 @@ async function writeFile() {
     }
 }
 
-managerInquiry();
+init();
