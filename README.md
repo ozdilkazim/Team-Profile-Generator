@@ -20,7 +20,8 @@ You should run `node -install` before running the code.
 Follow installation guide while using `node index.js` for generate a team profile HTML page. 
 
 ## License
-MIT License## Contributing
+MIT License
+## Contributing
 Thanks to Jung for incredible teaching.
 ## Tests
 Use `npm run test` if you desire to make a test.
