@@ -5,7 +5,7 @@ Team Profile Generator by using Inquirer and Node : This is a team profile gener
 You can find the output file at [THIS LINK](https://ozdilkazim.github.io/Team-Profile-Generator/output/team.html)
 
 This is a screenhot of output HTML page.
-![Screenshot](ss.jpg)
+![Screenshot](Screenshot.jpg)
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
